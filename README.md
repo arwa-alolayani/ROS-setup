@@ -5,15 +5,16 @@ Guide to setup ROS on Ubuntu using VirtualBox
 * Ubuntu 20.04.4 64bit
 * ROS kinetic 
 ## Steps
-1. [install VirtualBox] 
+1. [install VirtualBox]  
+2. [Create a new Virtual Machine] 
+3. [Configurating the VirtualMachine]
+4. [Install Ubuntu]
+5. [Installing ROS on Ubuntu]
+
 ## install VirtualBox
 1- Go to www.virtualbox.org and download the newest version of VirtualBox 
 
 2- Install VirtualBox
-
-## install Ubuntu ISO 
-
-1- Download Ubuntu ISO from https://ubuntu.com/download/desktop
 
 ## Create a new Virtual Machine 
 
@@ -25,6 +26,7 @@ Guide to setup ROS on Ubuntu using VirtualBox
 3- Allocate RAM for Guest OS - preferable half the size of RAM you have on your PC, then > click Next 
 
 4-  Create a Virtual Hard Disk, then select VDI > click Next, configurating the Type of VD (Virtual Disk) > select Fixed size storage > click Next, choosing the file location and size 
+
 ![image](https://user-images.githubusercontent.com/90524059/180401921-d9a67646-ff77-48a3-a41e-5ea9465d61a2.png)
 
 5- Click Create the Virtual Machine 
@@ -38,17 +40,19 @@ Guide to setup ROS on Ubuntu using VirtualBox
 
 
 ## Install Ubuntu
-1- Double click on the newly created virtual machine.
+1- Download Ubuntu ISO from https://ubuntu.com/download/desktop
 
-2- Wait while the virtual machine to checks the disk.
+2- Double click on the newly created virtual machine.
 
-3- Select Install Ubuntu, the choose your keyboard layout as English > click Continue.
+3- Wait while the virtual machine to checks the disk.
 
-4- Select Minimal installation, Download updates while installing Ubuntu and Install third-party software for graphics and Wi-Fi hardware and additional media formats > Click Continue
+4- Select Install Ubuntu, the choose your keyboard layout as English > click Continue.
 
-5- Select Erase disk and install Ubuntu then > Click Install Now and click Continue if a warning pops out.
+5- Select Minimal installation, Download updates while installing Ubuntu and Install third-party software for graphics and Wi-Fi hardware and additional media formats > Click Continue
 
-6- Next you have to select your contry and personal information > click Continue and whait while Ubuntu installs
+6- Select Erase disk and install Ubuntu then > Click Install Now and click Continue if a warning pops out.
+
+7- Next you have to select your country and personal information > click Continue and whait while Ubuntu installs
 ![image](https://user-images.githubusercontent.com/90524059/180408180-70b86434-580d-4ffb-81e5-4b9a9d6b379a.png)
 
 
@@ -79,7 +83,7 @@ sudo apt update
 sudo apt install ros-noetic-desktop-full
 ```
 
-#### 5. Environment setup
+### 5. Environment setup
 ```
 source /opt/ros/noetic/setup.bash
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc
